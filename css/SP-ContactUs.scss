@@ -1,0 +1,76 @@
+@import "./_variables.scss";
+@import "./_function.scss";
+
+.Connection_area {
+    .text_block {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        text-align: justify;
+        font-weight: $fw-600;
+        font-size: $fs-14;
+        letter-spacing: 4px;
+        line-height: 1.5;
+
+        @media screen and (max-width:1200px) {
+            border-bottom: 1px solid $br-black;
+        }
+
+        p {
+            &.text {
+                text-indent: 30px;
+            }
+        }
+    }
+
+
+    .Connection_form {
+
+        // 06/17 修改
+        .name {
+
+            &>label,
+            &>div {
+                min-width: 170px;
+            }
+        }
+        // 06/17 修改
+        
+        .text {
+            margin-bottom: 30px;
+            text-align: justify;
+            font-weight: $fw-bold;
+            font-size: $fs-14;
+            letter-spacing: 2px;
+
+            P {
+                padding: 15px 0px;
+            }
+
+        }
+
+        .form_btn {
+            @media screen and (max-width:1400px) {
+                display: flex;
+            }
+
+            button {
+                @include text_style($fs-16, unset, center, 3px);
+                @include btn_style(220px, unset, 10px, unset, unset, transparent, $brown);
+                @include font_hover($bc-brown, $fc-white);
+                width: 220px;
+                margin-right: 20px;
+                border: 1px solid $bc-brown;
+
+                @media screen and (max-width:1400px) {
+                    width: 50%;
+                    margin-right: 10px;
+
+                    &:nth-last-child(1) {
+                        margin-left: 10px;
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

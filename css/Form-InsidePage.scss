@@ -1,0 +1,1102 @@
+@import "./_variables.scss";
+@import "./_function.scss";
+
+.from {
+    .text {
+        font-size: $fs-14;
+        font-weight: $fw-600;
+        letter-spacing: 2px;
+        padding: 40px 0px 50px;
+    }
+
+    .activity {
+        .nameGroup {
+            border: 2px solid $fc-black;
+            padding: 15px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+            display: flex;
+            background-color: #231815;
+            color: $white;
+
+            @media (max-width:1024px) {
+                display: none;
+            }
+
+            .dateName {
+                min-width: 130px;
+                text-align: center;
+            }
+
+            .className {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+
+            .activityName {
+                display: flex;
+                justify-content: center;
+                flex-grow: 1;
+                text-align: center;
+            }
+
+            .takingName {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+
+            .IngName {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+        }
+
+        .news_list {
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            @media (max-width:768px) {
+                width: calc(100% + 40px);
+                margin: 0px -20px;
+            }
+
+            &>:nth-child(1) {
+                @media (max-width:1024px) {
+                    border-top: 2px solid $fc-gray;
+                }
+            }
+
+            &>:nth-child(2n) {
+                background-color: #23181510;
+            }
+
+            .news {
+                width: 100%;
+                min-height: 90px;
+                border-bottom: 2px solid $fc-gray;
+                display: flex;
+
+                @media (max-width:1024px) {
+                    flex-direction: column;
+                    padding: 25px 20px;
+                }
+
+                .area {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 130px;
+                    text-align: center;
+
+                    @media (max-width:1024px) {
+                        justify-content: flex-start;
+                    }
+
+                    span:nth-child(1) {
+                        display: none;
+
+                        @media (max-width:1024px) {
+                            display: block;
+                            padding-right: 15px;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                height: 20px;
+                                border: 1px solid $fc-gray;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    span:nth-child(2) {
+
+                        @media (max-width:1024px) {
+                            padding-left: 15px;
+                        }
+                    }
+
+                    &.activityarea {
+                        padding: 0px 10px;
+                        display: flex;
+                        justify-content: center;
+                        flex-grow: 1;
+                        text-align: center;
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+
+                            span:nth-child(1) {
+                                display: none;
+                            }
+
+                            span:nth-child(2) {
+                                padding-left: 0px;
+                            }
+                        }
+
+                    }
+
+                    &.datearea {
+
+                        //05-21新增 開始
+
+                        flex-direction: column;
+                        justify-content: space-around;
+                        padding: 15px 0;
+
+                        &::after {
+                            content: '';
+                            height: 20px;
+                            border: 1px solid $fc-gray;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+
+                            @media (max-width:1024px) {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+
+                        .start-date {
+                            font-size: $fs-12;
+
+                            &::after {
+                                content: '起'
+                            }
+
+                            @media (max-width:1024px) {
+                                margin-right: 15px;
+                            }
+                        }
+
+                        .end-date {
+                            font-size: $fs-12;
+
+                            &::after {
+                                content: '止'
+                            }
+                        }
+
+                        span {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                color: $fc-gray;
+                            }
+                        }
+
+                        //05-21新增 結束
+
+                        @media (max-width:1024px) {
+                            order: 3;
+                            margin-bottom: 10px;
+                            color: #666666;
+
+                            //05-21新增 開始
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            padding: 0;
+                            //05-21新增 結束
+                        }
+                    }
+
+                    &.classarea {
+
+                        //05-21新增 開始
+                        &::after {
+                            content: '';
+                            height: 20px;
+                            border: 1px solid $fc-gray;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        //05-21新增 結束
+
+                        @media (max-width:1024px) {
+                            order: 1;
+                            margin-bottom: 15px;
+
+                            span:nth-child(2) {
+                                padding: 0px 20px;
+                                border-left: 2px solid $fc-gray;
+                                border-right: 2px solid $fc-gray;
+                            }
+                        }
+
+                        span:nth-child(1) {
+                            @media (max-width:1024px) {
+                                display: none;
+                            }
+                        }
+
+
+                    }
+
+                    &.activityarea {
+                        padding: 0px 10px;
+
+                        @media (max-width:1024px) {
+                            padding: 0px;
+                            order: 2;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    &.takingarea {
+                        @media (max-width:1200px) {
+                            min-width: 100px;
+                        }
+
+                        @media (max-width:1024px) {
+                            color: #666666;
+                            order: 4;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.Ingarea {
+                        @media (max-width:1200px) {
+                            min-width: 100px;
+                        }
+
+                        span:nth-child(2) {
+                            color: #938075;
+
+                            &::after {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+
+                        @media (max-width:1024px) {
+                            order: 5;
+                            margin-top: 10px;
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        .btn-mob {
+                            display: none;
+                            width: 100%;
+                            height: 50px;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 25px;
+                            color: $brown;
+                            border: 1px solid $brown;
+                            background-color: transparent;
+                            font-size: $fs-16;
+                            letter-spacing: 3px;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background-color: $brown;
+                                color: $white;
+                            }
+
+                            @media (max-width:1024px) {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-pills {
+        @media (max-width:768px) {
+            justify-content: center;
+        }
+
+        .nav-item {
+            width: 250px;
+            height: 40px;
+            font-size: $fs-18;
+            font-weight: $fw-700;
+            letter-spacing: 2px;
+            text-align: center;
+
+            .active {
+                color: $white;
+                background-color: $brown;
+            }
+
+            .nav-link {
+                border-radius: 0px;
+                border: 1px solid $black;
+                transition: .3s;
+
+                &:hover {
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+
+
+    .login {
+        .quantity {
+            margin-bottom: 30px;
+
+            // 05-21修改 開始
+            a {
+                font-size: $fs-16;
+                font-weight: $fw-600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 40px;
+                border-radius: 30px;
+                background-color: transparent;
+                border: 1px solid $brown;
+                color: $brown;
+                box-shadow: none;
+                transition: .3s;
+                margin-left: auto;
+
+                &:hover {
+                    color: $white;
+                    background-color: $brown;
+                }
+            }
+
+            // 05-21修改 結束
+
+        }
+    }
+
+    .title {
+        display: flex;
+        margin-bottom: 45px;
+
+        // align-items: center;
+        @media (max-width:768px) {
+            flex-direction: column;
+            margin-bottom: 0px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+
+            .icon {
+                height: 8px;
+                width: 50px;
+                background-color: $black;
+            }
+
+            &:nth-child(1) {
+                @media (max-width:768px) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &:nth-child(2) {
+                font-size: $fs-22;
+                font-weight: $fw-700;
+                letter-spacing: 5px;
+
+                @media (max-width:768px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.Description {
+    .text {
+        font-size: $fs-14;
+        font-weight: $fw-600;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        display: flex;
+        margin-bottom: 45px;
+        flex-direction: column;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+
+            .icon {
+                height: 8px;
+                width: 50px;
+                background-color: $black;
+            }
+
+            &:nth-child(1) {
+                margin-bottom: 30px;
+            }
+
+            &:nth-child(2) {
+                font-size: $fs-22;
+                font-weight: $fw-700;
+                letter-spacing: 5px;
+                margin-bottom: 15px;
+
+                select {
+                    border: 2px solid $black;
+                    font-size: $fs-14;
+                    width: 162px;
+                    height: 32px;
+                    margin-left: 20px;
+                    text-align: center;
+                    text-align-last: center;
+                    border-right: 0.5px solid $black;
+                }
+
+                button {
+                    border: 2px solid $black;
+                    font-size: $fs-14;
+                    text-align: center;
+                    width: 100px;
+                    height: 32px;
+                    background-color: transparent;
+                    border-left: 0.5px solid $black;
+
+                    @media (max-width:768px) {
+                        display: none;
+                    }
+                }
+            }
+
+            button {
+                transition: 0.3s;
+
+                &:hover {
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+
+    .stage {
+        .nameGroup {
+            border: 2px solid $fc-black;
+            padding: 15px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+            display: flex;
+            background-color: #231815;
+            color: $white;
+
+            @media (max-width:1024px) {
+                display: none;
+            }
+
+            .dateName {
+                min-width: 200px;
+                text-align: center;
+            }
+
+            .activityName {
+                display: flex;
+                justify-content: center;
+                flex-grow: 1;
+                text-align: center;
+            }
+
+            .IngName {
+                min-width: 200px;
+                text-align: center;
+            }
+        }
+
+        .news_list {
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            &>:nth-child(1) {
+                @media (max-width:1024px) {
+                    border-top: 2px solid $fc-gray;
+                }
+            }
+
+            &>:nth-child(2n) {
+                background-color: $black-Transparent;
+            }
+
+            &>:nth-last-child(1) {
+                margin-bottom: 40px;
+
+                @media (max-width:1024 px) {
+                    margin-bottom: 45px;
+                }
+            }
+
+            .news {
+                width: 100%;
+                min-height: 90px;
+                border-bottom: 2px solid $fc-gray;
+                display: flex;
+
+                @media (max-width:1024px) {
+                    flex-direction: column;
+                    padding: 40px 20px;
+                }
+
+                .area {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 200px;
+                    text-align: center;
+
+                    @media (max-width:1024px) {
+                        justify-content: flex-start;
+                    }
+
+                    span:nth-child(1) {
+                        display: none;
+
+                        @media (max-width:1024px) {
+                            display: block;
+                            padding-right: 15px;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                height: 20px;
+                                border: 1px solid $fc-gray;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    span:nth-child(2) {
+
+                        &::after {
+                            content: '';
+                            height: 20px;
+                            border: 1px solid $fc-gray;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        @media (max-width:1024px) {
+                            padding-left: 15px;
+
+                            &::after {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+                    }
+
+                    &.activityarea {
+                        display: flex;
+                        justify-content: center;
+                        flex-grow: 1;
+                        text-align: center;
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+                        }
+
+                    }
+
+                    &.datearea {
+                        span {
+                            &:nth-child(2) {
+                                color: $fc-gray;
+                            }
+                        }
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+                            order: 3;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.activityarea {
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+                            order: 2;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.Ingarea {
+
+                        span:nth-child(2) {
+                            &::after {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+                            order: 5;
+                        }
+
+                        button {
+                            background-color: #231815;
+                            color: $white;
+                            border: 0px solid $white;
+                            letter-spacing: 3px;
+                            width: 100px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Reply {
+    .title {
+        display: flex;
+        margin-bottom: 45px;
+
+        // align-items: center;
+        @media (max-width:768px) {
+            flex-direction: column;
+            margin-bottom: 25px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+
+            .icon {
+                height: 8px;
+                width: 50px;
+                background-color: $black;
+            }
+
+            &:nth-child(1) {
+                @media (max-width:768px) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &:nth-child(2) {
+                font-size: $fs-22;
+                font-weight: $fw-700;
+                letter-spacing: 5px;
+
+                @media (max-width:768px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .activity {
+        .nameGroup {
+            border: 2px solid $fc-black;
+            padding: 15px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+            display: flex;
+            background-color: $brown;
+            color: $white;
+
+            @media (max-width:1024px) {
+                display: none;
+            }
+
+            .dateName {
+                min-width: 130px;
+                text-align: center;
+            }
+
+            .className {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+
+            .activityName {
+                display: flex;
+                justify-content: center;
+                flex-grow: 1;
+                text-align: center;
+            }
+
+            .takingName {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+
+            .IngName {
+                min-width: 130px;
+                text-align: center;
+
+                @media (max-width:1200px) {
+                    min-width: 100px;
+                }
+            }
+        }
+
+        .news_list {
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            &>:nth-child(1) {
+                @media (max-width:1024px) {
+                    border-top: 2px solid $fc-gray;
+                }
+            }
+
+            &>:nth-child(2n) {
+                background-color: #23181510;
+            }
+
+            @media (max-width:1024px) {
+                width: calc(100% + 35px);
+                margin: 0px -20px;
+            }
+
+            .news {
+                width: 100%;
+                min-height: 90px;
+                border-bottom: 2px solid $fc-gray;
+                display: flex;
+
+                @media (max-width:1024px) {
+                    flex-direction: column;
+                    padding: 25px 20px;
+                }
+
+                .area {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 130px;
+                    text-align: center;
+
+                    @media (max-width:1024px) {
+                        justify-content: flex-start;
+                    }
+
+                    span:nth-child(1) {
+                        display: none;
+
+                        @media (max-width:1024px) {
+                            display: block;
+                            padding-right: 15px;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                height: 20px;
+                                border: 1px solid $fc-gray;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+
+                    span:nth-child(2) {
+
+                        @media (max-width:1024px) {
+                            padding-left: 15px;
+                        }
+                    }
+
+                    &.activityarea {
+                        padding: 0px 10px;
+                        display: flex;
+                        justify-content: center;
+                        flex-grow: 1;
+                        text-align: center;
+
+                        @media (max-width:1024px) {
+                            justify-content: flex-start;
+
+                            span:nth-child(1) {
+                                display: none;
+                            }
+
+                            span:nth-child(2) {
+                                padding-left: 0px;
+                            }
+                        }
+
+                    }
+
+                    &.datearea {
+
+                        //05-21新增 開始
+
+                        flex-direction: column;
+                        justify-content: space-around;
+                        padding: 15px 0;
+
+                        &::after {
+                            content: '';
+                            height: 20px;
+                            border: 1px solid $fc-gray;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+
+                            @media (max-width:1024px) {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+
+                        .start-date {
+                            font-size: $fs-12;
+
+                            &::after {
+                                content: '起'
+                            }
+
+                            @media (max-width:1024px) {
+                                margin-right: 15px;
+                            }
+                        }
+
+                        .end-date {
+                            font-size: $fs-12;
+
+                            &::after {
+                                content: '止'
+                            }
+                        }
+
+                        span {
+
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                color: $fc-gray;
+                            }
+                        }
+
+                        //05-21新增 結束
+
+                        @media (max-width:1024px) {
+                            order: 3;
+                            margin-bottom: 10px;
+                            color: #666666;
+
+                            //05-21新增 開始
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            padding: 0;
+                            //05-21新增 結束
+                        }
+                    }
+
+                    &.classarea {
+
+                        //05-21新增 開始
+                        &::after {
+                            content: '';
+                            height: 20px;
+                            border: 1px solid $fc-gray;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        //05-21新增 結束
+
+                        @media (max-width:1024px) {
+                            order: 1;
+                            margin-bottom: 15px;
+
+                            span:nth-child(2) {
+                                padding: 0px 20px;
+                                border-left: 2px solid $fc-gray;
+                                border-right: 2px solid $fc-gray;
+                            }
+                        }
+
+                        span:nth-child(1) {
+                            @media (max-width:1024px) {
+                                display: none;
+                            }
+                        }
+
+
+                    }
+
+                    &.activityarea {
+                        padding: 0px 10px;
+
+                        @media (max-width:1024px) {
+                            padding: 0px;
+                            order: 2;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    &.takingarea {
+                        @media (max-width:1200px) {
+                            min-width: 100px;
+                        }
+
+                        @media (max-width:1024px) {
+                            color: #666666;
+                            order: 4;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.Ingarea {
+                        @media (max-width:1200px) {
+                            min-width: 100px;
+                        }
+
+                        span:nth-child(2) {
+                            color: #938075;
+
+                            &::after {
+                                content: '';
+                                height: 0px;
+                                border: 0px solid $fc-gray;
+                            }
+                        }
+
+                        @media (max-width:1024px) {
+                            order: 5;
+                            margin-top: 10px;
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        .btn-mob {
+                            display: none;
+                            width: 100%;
+                            height: 50px;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 25px;
+                            color: $brown;
+                            border: 1px solid $brown;
+                            background-color: transparent;
+                            font-size: $fs-16;
+                            letter-spacing: 3px;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background-color: $brown;
+                                color: $white;
+                            }
+
+                            @media (max-width:1024px) {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Sign_form {
+    padding: 0px;
+    margin-bottom: 5px;
+
+    ol {
+        max-width: 830px;
+    }
+
+    .text {
+        margin-bottom: 30px;
+        text-align: justify;
+        font-weight: $fw-bold;
+        font-size: $fs-14;
+        letter-spacing: 2px;
+
+        P {
+            padding: 15px 0px;
+        }
+
+    }
+
+    .form_btn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            @include text_style($fs-16, unset, center, 3px);
+            @include btn_style(220px, unset, 10px, unset, unset, transparent, $brown);
+            @include font_hover($bc-brown, $fc-white);
+            width: 220px;
+            margin-left: 20px;
+            border: 1px solid $bc-brown;
+
+            @media (max-width:1400px) {
+                width: 50%;
+                margin-left: 10px;
+
+                &:nth-last-child(1) {
+                    margin-left: 10px;
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

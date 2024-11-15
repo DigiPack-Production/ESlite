@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap");
+.Connection_area .text_block {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1200px) {
+  .Connection_area .text_block {
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.Connection_area .text_block p.text {
+  text-indent: 30px;
+}
+
+.Connection_area .Connection_form .name > label,
+.Connection_area .Connection_form .name > div {
+  min-width: 170px;
+}
+
+.Connection_area .Connection_form .text {
+  margin-bottom: 30px;
+  text-align: justify;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.Connection_area .Connection_form .text P {
+  padding: 15px 0px;
+}
+
+@media screen and (max-width: 1400px) {
+  .Connection_area .Connection_form .form_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.Connection_area .Connection_form .form_btn button {
+  font-size: 16px;
+  font-weight: unset;
+  text-align: center;
+  letter-spacing: 3px;
+  max-width: 220px;
+  max-height: unset;
+  padding: 10px 25px;
+  border-radius: unset;
+  background-color: transparent;
+  border: 1px solid unset;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #231815;
+  width: 220px;
+  margin-right: 20px;
+  border: 1px solid #231815;
+}
+
+.Connection_area .Connection_form .form_btn button:hover {
+  background-color: #231815;
+}
+
+.Connection_area .Connection_form .form_btn button:hover {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1400px) {
+  .Connection_area .Connection_form .form_btn button {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .Connection_area .Connection_form .form_btn button:nth-last-child(1) {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+}
+/*# sourceMappingURL=SP-ContactUs.css.map */

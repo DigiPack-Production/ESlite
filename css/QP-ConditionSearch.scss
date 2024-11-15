@@ -1,0 +1,79 @@
+@import "./_variables.scss";
+@import "./_function.scss";
+
+.Connection_area {
+    padding: 0px 15px;
+
+    .text_block {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        text-align: justify;
+
+        @media screen and (max-width:1200px) {
+            border-bottom: 1px solid $br-black;
+        }
+
+        p {
+            letter-spacing: 2px;
+
+            &.text {
+                text-indent: 30px;
+            }
+        }
+    }
+
+    .Connection_form {
+
+        .text {
+            margin-bottom: 30px;
+            text-align: justify;
+            letter-spacing: 1px;
+
+            P {
+                padding: 15px 0px;
+            }
+
+        }
+
+        .form_btn {
+            padding: 15px;
+
+            @media screen and (max-width:1400px) {
+                display: flex;
+            }
+
+            button {
+                @include text_style($fs-16, $fw-700, center, 3px);
+                @include font_hover($bc-brown, $fc-white);
+                width: 220px;
+                padding: 10px 0px;
+                background-color: transparent;
+                margin-right: 20px;
+                border: 1px solid $black;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: $bc-brown;
+                }
+
+                &:nth-last-child(1) {
+                    margin-right: 0px;
+                }
+
+                @media screen and (max-width:1400px) {
+                    width: 50%;
+                    margin-right: 10px;
+
+                    &:nth-last-child(1) {
+                        margin-left: 10px;
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ui-datepicker-div {
+    left: 62% !important;
+}

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap");
+.Connection_area {
+  padding: 0px 15px;
+}
+
+.Connection_area .text_block {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  .Connection_area .text_block {
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.Connection_area .text_block p {
+  letter-spacing: 2px;
+}
+
+.Connection_area .text_block p.text {
+  text-indent: 30px;
+}
+
+.Connection_area .Connection_form .text {
+  margin-bottom: 30px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.Connection_area .Connection_form .text P {
+  padding: 15px 0px;
+}
+
+.Connection_area .Connection_form .form_btn {
+  padding: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  .Connection_area .Connection_form .form_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.Connection_area .Connection_form .form_btn button {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #231815;
+  width: 220px;
+  padding: 10px 0px;
+  background-color: transparent;
+  margin-right: 20px;
+  border: 1px solid #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Connection_area .Connection_form .form_btn button:hover {
+  color: #FFFFFF;
+}
+
+.Connection_area .Connection_form .form_btn button:hover {
+  background-color: #231815;
+}
+
+.Connection_area .Connection_form .form_btn button:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1400px) {
+  .Connection_area .Connection_form .form_btn button {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .Connection_area .Connection_form .form_btn button:nth-last-child(1) {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+}
+
+#ui-datepicker-div {
+  left: 62% !important;
+}
+/*# sourceMappingURL=QP-ConditionSearch.css.map */

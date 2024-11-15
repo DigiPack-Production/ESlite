@@ -1,0 +1,170 @@
+@import "./_variables.scss";
+@import "./_function.scss";
+
+
+
+main.container {
+    padding-bottom: 50px;
+}
+
+// 2020-05-03改架構 開始
+.Guide_area {
+    .row{
+        padding: 0;
+        margin: 0;
+
+        &>li{
+            margin-bottom: 80px;
+        }
+
+        @media(max-width:992px){
+            &>li{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .level-1{      
+        &>li{
+            font-weight: 700;
+            font-size: $fs-22;
+            letter-spacing: 5px;
+            color: #333333;
+
+            &>span{
+                a{
+                    font-weight: 700;
+                    font-size: 22px;
+                    letter-spacing: 5px;
+                    color: #333333;
+                }
+    
+                &::after{
+                    content: ' ';
+                    position: absolute;
+                    bottom: -25px;
+                    left: -40px;
+                    width: 230px;
+                    height: 1px;
+                    background-color: #333333;
+                }
+            }
+        }
+    }
+
+    .level-2{
+        margin-top: 40px;
+        
+        &>li{
+            margin-bottom: 10px;
+            font-size: $fs-14;
+            letter-spacing: 4px;
+            color: $fc-666666-gray;
+            font-weight: 800;
+            opacity: 0.9;
+
+            &::before{
+                font-size: $fs-14;
+                letter-spacing: 4px;
+                color: $fc-666666-gray;
+                font-weight: 800;
+                opacity: 0.9;
+            }
+
+            &>a{
+                cursor: pointer;
+                font-weight: 700;
+                padding: 10px 0px;
+                font-size: $fs-14;
+                letter-spacing: 4px;
+                color: $fc-666666-gray;
+                font-weight: 800;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .level-3{
+        margin-top: 10px;
+        transition: 1s;
+        max-height: 300px;
+        &>li{
+
+            &::before{
+                letter-spacing: 3px;
+                font-weight: 800;
+                opacity: 0.4;
+                font-size: $fs-12;
+            }
+
+            &>a{
+                letter-spacing: 3px;
+                font-weight: 800;
+                opacity: 0.4;
+                font-size: $fs-12;
+            }
+        }
+    }
+
+    // 手機版開合功能裝飾
+    @media (max-width:992px) {
+        .collapse-deco {
+            position: relative;
+            transition: .3s;
+            transition-timing-function: ease-in-out;
+
+            &::after,
+            &::before {
+                content: ' ';
+                position: absolute;
+                right: -20px;
+                top: 19px;
+                width: 9px;
+                height: 1px;
+                background-color: $fc-black;
+                opacity: 0.6;
+            }
+
+            &::before {
+                transform: rotate(0deg);
+                transition: 0.3s;
+            }
+
+            &._close {
+
+                &::before {
+                    transform: rotate(90deg);
+                }
+
+                &~ol{
+                    max-height: 0px;
+                    transition: 0.4s;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    // ol li排序
+    ol {
+        list-style: none;
+    }
+
+    ol>li:first-child {
+        counter-reset: item;
+    }
+
+    ol>li {
+        counter-increment: item;
+    }
+
+    .level-1>li:before {
+        content: counters(item, ".") ". ";
+        font-weight: bold;
+    }
+
+    ol>li:before {
+        content: counters(item, ".") " ";
+        font-weight: bold;
+    }
+}
+// 2020-05-03改架構 結束

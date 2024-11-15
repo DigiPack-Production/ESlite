@@ -1,0 +1,95 @@
+@import "./model.scss";
+@import "./_variables.scss";
+@import "./_function.scss";
+
+
+
+.btnGroup {
+
+    .project {
+        // 06/17修改
+        @include btn_style(780px, unset, 30px, 13px, $light-brown, $brown-hover, $brown);
+        // 06/17修改
+        @include text_style($fs-18, unset, unset, unset);
+        color: $white;
+        margin-bottom: 30px;
+
+        &::before {
+            @media (max-width:768px) {
+                content: '';
+                border: 1px solid $fc-white;
+                width: 130px;
+                position: absolute;
+                bottom: 20%;
+            }
+        }
+
+        .date {
+            transition: .2s;
+        }
+
+        &:hover {
+            .date {
+                background-color: $bc-brown;
+            }
+        }
+
+        @media (max-width:768px) {
+            // max-height: 90px;
+            margin-bottom: 40px;
+            font-size: $fs-16;
+            position: relative;
+            justify-content: center;
+        }
+
+        span {
+            margin-right: 20px;
+        }
+
+        .title {
+            font-weight: $fw-400;
+            letter-spacing: 5px;
+
+            @media (max-width:1024px) {
+                letter-spacing: 3px;
+            }
+        }
+
+        hr {
+            flex-grow: 1;
+            background-color: $fc-white;
+            margin: 0 30px;
+
+            @media (max-width:768px) {
+                display: none;
+            }
+        }
+
+        .date {
+            width: 50px;
+            height: 50px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:768px) {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $brown-hover;
+            }
+
+            p {
+                font-size: $fs-14;
+                line-height: 15px;
+                &:nth-last-child(1) {
+                    transform: scale(0.75);
+                }
+            }
+        }
+    }
+}
